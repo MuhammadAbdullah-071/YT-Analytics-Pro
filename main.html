@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate YouTube Analytics Pro</title>
+    <link rel="shortcut icon" href="YT_Analytics_Pro.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <a href="main.html" style="color: #FF0000; text-decoration: none;"><span>YT Analytics Pro</span></a>
+        </div>
+        <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+            <button class="share-btn" id="shareBtn">
+                <i class="fas fa-share-alt"></i>
+            </button>
+            <div class="social-share" id="socialShare">
+                <a href="#" title="Facebook" id="shareFB"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Twitter" id="shareTwitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn" id="shareLinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="WhatsApp" id="shareWhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" title="Reddit" id="shareReddit"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" title="Telegram" id="shareTelegram"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Advanced YouTube Channel Analytics</h1>
+            <p>Get detailed statistics, earnings estimates, and growth insights for any YouTube channel.</p>
+        </section>
+
+        <section class="search-container">
+            <div class="search-box">
+                <input type="text" id="youtubeInput" placeholder="Enter YouTube Channel Name or URL..." aria-label="YouTube channel input">
+                <button class="clear-btn" id="clearBtn"><i class="fas fa-times"></i></button>
+                <button id="analyzeBtn"><i class="fas fa-chart-line"></i> Analyze</button>
+            </div>
+        </section>
+
+        <div id="loading">
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <div class="spinner-inner"></div>
+            </div>
+            <div class="loading-text">
+                <p>Fetching channel data</p>
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorMessage"></div>
+
+        <div id="results">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+
+        <div id="sharePreview" class="share-preview">
+            <div class="share-preview-content">
+                <button class="close-preview" id="closePreview"><i class="fas fa-times"></i></button>
+                <h3>Share Analytics Report</h3>
+                <div class="preview-card">
+                    <img id="previewThumbnail" src="" alt="Channel Thumbnail">
+                    <div class="preview-info">
+                        <h4 id="previewTitle"></h4>
+                        <p id="previewStats"></p>
+                        <div class="preview-tags" id="previewTags"></div>
+                    </div>
+                </div>
+                <div class="share-options">
+                    <button class="download-btn" id="downloadPNG"><i class="fas fa-image"></i> Download as PNG</button>
+                    <button class="download-btn" id="downloadPDF"><i class="fas fa-file-pdf"></i> Download as PDF</button>
+                    <button class="download-btn" id="copyLink"><i class="fas fa-link"></i> Copy Share Link</button>
+                </div>
+                <div class="social-share-preview">
+                    <p>Share via:</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook" id="previewFB"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter" id="previewTwitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn" id="previewLinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="WhatsApp" id="previewWhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="Reddit" id="previewReddit"><i class="fab fa-reddit-alien"></i></a>
+                        <a href="#" title="Telegram" id="previewTelegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>YT Analytics Pro &copy; 2025 | Advanced YouTube Channel Statistics Tool</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
